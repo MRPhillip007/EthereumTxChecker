@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "BiQf4R3Ahglh02cta/851sZmUu9lDTsJ6R9JNALMn4A=",
+  "Source": "EthereumTxChecker.API",
+  "BasePath": "_content/EthereumTxChecker.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
