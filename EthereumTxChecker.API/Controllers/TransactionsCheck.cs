@@ -22,17 +22,6 @@ namespace EthereumTxChecker.API.Controllers
         private List<string> GenerateEndpoints() => _requester.GenerateEndpoints(GetWallets());
 
         [HttpGet]
-        public List<Result> GetTransactionData()
-        {
-            List<string> endpoints = GenerateEndpoints();
-            List<Result> result = new List<Result>();
-
-            foreach (var endpoint in endpoints)
-            {
-                result = _requester.GetTransactionsData(endpoint);
-                Thread.Sleep(1000);
-            }
-            return result;
-        }
+        public List<Result> GetTransactionData() => _requester.GetTransactionsData(GenerateEndpoints());
     }
 }
