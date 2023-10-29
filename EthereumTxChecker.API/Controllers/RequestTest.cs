@@ -14,8 +14,5 @@ namespace EthereumTxChecker.API.Controllers
         {
             _requester = requester;
         }
-
-        [HttpGet]
-        public string GetApiKey() => _requester.GetApiKey();
     }
 }

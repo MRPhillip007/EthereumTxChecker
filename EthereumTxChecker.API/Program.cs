@@ -1,6 +1,7 @@
 using EthereumTxChecker.Models;
 using EthereumTXChecker.BLL.Services.FileManagerService;
 using EthereumTXChecker.BLL.Services.RequestManagerService;
+using EthereumTXChecker.BLL.Services.OutputFormatterService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,7 @@ builder.Services.AddSwaggerGen();
 // My Services
 builder.Services.AddScoped<IFileManager, FileManager>();
 builder.Services.AddScoped<IRequester, Requester>();
+builder.Services.AddScoped<IOutputFormatter, OutputFormatter>();
 
 // Configs and Secrets init
 builder.Services.Configure<FileManagerConfig>(builder.Configuration.GetSection("FileManagerConfig"));
